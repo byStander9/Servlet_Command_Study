@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Main Page</title>
+</head>
+<body>
+	1. 물품등록</br>
+	<form action = "insert.do">
+		Name: <input type="text" name="name"></input></br>
+		Category: <input type="text" name="category"></input></br>
+		Price: <input type="text" name="price"></input></br>
+		<input type="submit" value="등록">
+	</form></br>
+	2. 물품검색</br>
+	<form action = "searchName.do">
+		Name: <input type="text" name="name"></input></br>
+		<input type="submit" value="검색"></br>
+	</form>
+	<form action = "searchCategory.do">
+		Category: <input type="text" name="category"></input></br>
+		<input type="submit" value="검색">
+	</form></br>
+	3. 물품가격 변경</br>
+	<form action = "changePrice.do">
+		Name: <input type="text" name="name"></input></br>
+		Price: <input type="text" name="price"></input></br>
+		<input type="submit" value="변경"></input>
+	</form>
+</body>
+</html>
