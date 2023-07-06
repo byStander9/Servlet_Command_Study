@@ -54,6 +54,11 @@ public class MemberDaoImpl implements MemberDao {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, info);
 			resultSet = pstmt.executeQuery();
+			while(resultSet.next()) {
+				System.out.println(resultSet.getString("name"));
+				System.out.println(resultSet.getString("category"));
+				System.out.println(resultSet.getString("price"));
+			}
 			System.out.println("data searched");
 		} catch(SQLException e) {
 			System.out.println("connection, insert error");

@@ -2,6 +2,7 @@ package com.sw.command;
 
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -90,6 +91,14 @@ public class MainController extends HttpServlet {
 			resultSet = service.searchProd("category", name);
 			
 			resultPage = "searchResult.jsp";
+			try {
+				while(resultSet.next()) {
+					
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+				System.out.println("resultSet search loop error");
+			}
 			session.setAttribute("searchedData", resultSet);
 			
 		} else if(com.equals("/changePrise.do")) {
